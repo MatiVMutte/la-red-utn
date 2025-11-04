@@ -5,7 +5,7 @@ export class ApiResponse<T> {
         public success: boolean,
         public message: string,
         public data?: T,
-        public error?: string
+        public error?: string,
     ) {}
 
     static success<T>(data: T, message: string = 'Operación exitosa'): ApiResponse<T> {
