@@ -1,5 +1,5 @@
 import UsuarioDataSource from "../../domain/datasources/usuario.datasource.mongodb";
-import Usuario from "../../domain/entities/usuario.entitie";
+import Usuario from "../../domain/entities/usuario.entity";
 
 class UsuarioDataSourceImplLocal implements UsuarioDataSource {
 
@@ -49,32 +49,52 @@ class UsuarioDataSourceImplLocal implements UsuarioDataSource {
 
 export default UsuarioDataSourceImplLocal;
 
+import { v4 as uuid } from 'uuid';
+
 let usuarioData: Usuario[] = [
     {
-        id: "1",
+        id: uuid(),
+        nombre: "Juan",
+        apellido: "Pérez",
         username: "usuario1",
         email: "usuario1@gmail.com",
         password: "password1",
+        fechaNacimiento: new Date('1990-05-15'),
+        descripcion: "Usuario de prueba número uno",
+        profileImageUrl: "https://example.com/profiles/usuario1.jpg",
         role: "USER",
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        deletedAt: null
     },
     {
-        id: "2",
+        id: uuid(),
+        nombre: "María",
+        apellido: "González",
         username: "usuario2",
         email: "usuario2@gmail.com",
         password: "password2",
+        fechaNacimiento: new Date('1992-08-20'),
+        descripcion: "Usuario de prueba número dos",
+        profileImageUrl: "https://example.com/profiles/usuario2.jpg",
         role: "USER",
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        deletedAt: null
     },
     {
-        id: "3",
+        id: uuid(),
+        nombre: "Carlos",
+        apellido: "Rodríguez",
         username: "usuario3",
         email: "usuario3@gmail.com",
         password: "password3",
+        fechaNacimiento: new Date('1988-12-10'),
+        descripcion: "Usuario de prueba número tres",
+        profileImageUrl: "https://example.com/profiles/usuario3.jpg",
         role: "USER",
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        deletedAt: null
     }
 ];

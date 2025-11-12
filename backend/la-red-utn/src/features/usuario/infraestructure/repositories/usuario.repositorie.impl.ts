@@ -1,5 +1,5 @@
 import { Injectable, Inject } from "@nestjs/common";
-import Usuario from "../../domain/entities/usuario.entitie";
+import Usuario from "../../domain/entities/usuario.entity";
 import UsuarioRepositorie from "../../domain/repositories/usuario.repositorie";
 import type UsuarioDataSource from "../../domain/datasources/usuario.datasource.mongodb";
 

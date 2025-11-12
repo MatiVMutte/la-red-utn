@@ -1,4 +1,4 @@
-import Usuario from "../entities/usuario.entitie";
+import Usuario from "../entities/usuario.entity";
 
 interface UsuarioRepositorie {
 
